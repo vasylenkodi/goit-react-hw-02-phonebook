@@ -75,7 +75,10 @@ export default class App extends Component {
 
         <h2>Contacts</h2>
         <Search value={this.state.filter} onSearch={this.searchHandler} />
-        <Contacts contacts={visibleContacts} contactDeleteHandler={this.contactDeleteHandler} />
+        <Contacts
+          contacts={visibleContacts}
+          contactDeleteHandler={this.contactDeleteHandler}
+        />
       </div>
     );
   }
