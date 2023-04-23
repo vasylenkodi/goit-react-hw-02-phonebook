@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import css from './contacts.module.css';
 
 export default class Contacts extends Component {
+  static propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+    contactDeleteHandler: PropTypes.func,
+  }
 
   onContactDelete = (event) => {
     this.props.contactDeleteHandler(event.currentTarget.dataset.id);

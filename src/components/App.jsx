@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
 import ContactsForm from './ContactsForm';
-import { Search } from './Search';
+import { Search } from './Search/Search';
 import Contacts from './Contacts';
 import css from './app.module.css';
 
@@ -41,7 +41,6 @@ export default class App extends Component {
 
   searchHandler = event => {
     const { value } = event.currentTarget;
-    console.log(value);
     this.setState({
       filter: value,
     });

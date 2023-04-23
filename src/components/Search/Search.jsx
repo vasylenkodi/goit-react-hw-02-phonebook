@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import css from './search.module.css';
 
@@ -17,3 +18,8 @@ export const Search = ({ value, onSearch }) => {
       </label>
     );
 };
+
+Search.propTypes = {
+  value: PropTypes.string,
+  onSearch: PropTypes.func,
+}
