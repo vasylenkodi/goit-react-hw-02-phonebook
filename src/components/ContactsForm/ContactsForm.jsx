@@ -7,7 +7,7 @@ export default class ContactsForm extends Component {
     id: PropTypes.string,
     telId: PropTypes.string,
     onSubmit: PropTypes.func,
-  }
+  };
 
   state = {
     name: '',
@@ -25,7 +25,15 @@ export default class ContactsForm extends Component {
     event.preventDefault();
 
     this.props.onSubmit(this.state);
+    this.reset();
   };
+
+  reset() {
+    this.setState({
+      name: '',
+      number: '',
+    });
+  }
 
   render() {
     return (
@@ -56,7 +64,9 @@ export default class ContactsForm extends Component {
             required
           />
         </label>
-        <button type="submit" className={css.addContactButton}>Add contact</button>
+        <button type="submit" className={css.addContactButton}>
+          Add contact
+        </button>
       </form>
     );
   }

@@ -35,7 +35,6 @@ export default class App extends Component {
       return {
         contacts: [...prevState.contacts, data],
       };
-
     });
   };
 
